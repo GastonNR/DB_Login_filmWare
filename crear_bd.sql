@@ -14,13 +14,6 @@ CREATE TABLE IF NOT EXISTS `clientes` (
   `email` VARCHAR(100) NOT NULL
 ) ENGINE=InnoDB;
 
-CREATE TABLE IF NOT EXISTS `cines`(
-    `id` INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-    `nombre` VARCHAR(50) NOT NULL,
-    `administrador` INT,
-    FOREIGN KEY (administrador) REFERENCES administrador(id)
-) ENGINE=InnoDB;
-
 CREATE TABLE IF NOT EXISTS `direccion` (
     `id` INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     `calle` VARCHAR(50) NOT NULL,
@@ -35,9 +28,9 @@ CREATE TABLE IF NOT EXISTS `sucursales` (
     `direccion` INT NOT NULL,
     `numero_de_salas` INT,
     `capacidad` INT,
-    `cine` INT,
+    `administrador` INT,
     FOREIGN KEY (direccion) REFERENCES direccion(id),
-    FOREIGN KEY (cine) REFERENCES cines(id)
+    FOREIGN KEY (administrador) REFERENCES administrador(id)
 ) ENGINE=InnoDB;
 
 
