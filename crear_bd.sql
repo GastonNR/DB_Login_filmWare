@@ -5,7 +5,7 @@ CREATE TABLE IF NOT EXISTS `administradores` (
   `id` INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
   `nombre_completo` VARCHAR(100) NOT NULL,
   `nombre_usuario` VARCHAR(50) NOT NULL,
-  `password` VARCHAR(50) NOT NULL,
+  `password` VARCHAR(100) NOT NULL,
   `email` VARCHAR(100) NOT NULL,
   `tipo` VARCHAR(20) DEFAULT 'admin'
 ) ENGINE=InnoDB;
@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS `clientes` (
   `id` INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
   `nombre_completo` VARCHAR(100) NOT NULL,
   `nombre_usuario` VARCHAR(50) NOT NULL,
-  `password` VARCHAR(50) NOT NULL,
+  `password` VARCHAR(100) NOT NULL,
   `email` VARCHAR(100) NOT NULL,
   `tipo` VARCHAR(20) DEFAULT 'cliente'
 ) ENGINE=InnoDB;
